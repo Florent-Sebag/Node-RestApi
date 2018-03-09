@@ -15,12 +15,13 @@ Very simple API using Node.js and MongoDB, you can try it with postman on https:
         else error
 
   - POST /api/justify :
-      * REQUIRED HEADER\n
+      * REQUIRED HEADER
         Content-Type: text/plain
+        Authorization: Bearer [Token]
 
       * REQUIRED PARAMETERS
         The text you want to justify
 
       * RESPONSE
-        200 if success with a justified text
+        200 if success with a justified text (There is a usage limit per token, 80,000 words/day)
         else error
