@@ -1,6 +1,6 @@
 # Node-RestApi
 
-Very simple API using Node.js and MongoDB, you can try it with postman on https://guarded-waters-77123.herokuapp.com/
+Very simple API to justify a text using Node.js and MongoDB. You can try it with postman on https://guarded-waters-77123.herokuapp.com/
 
 ## URL
   - POST /api/token :
