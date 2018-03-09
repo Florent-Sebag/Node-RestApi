@@ -7,7 +7,7 @@ var express = require('express'),
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/ApiDb');
+mongoose.connect('mongodb://test_user:test_password@ds263408.mlab.com:63408/heroku_rwkw9nj3');
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
