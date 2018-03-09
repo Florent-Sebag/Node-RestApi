@@ -15,7 +15,7 @@ Very simple API using Node.js and MongoDB, you can try it with postman on https:
         else error
 
   - POST /api/justify :
-      * REQUIRED HEADER
+      * REQUIRED HEADER\n
         Content-Type: text/plain
 
       * REQUIRED PARAMETERS
