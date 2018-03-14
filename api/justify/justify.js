@@ -37,19 +37,20 @@ function put_new_line(str)
 
   for (var i = 0; i < tab.length; i++)
   {
-    if (tab[i].includes("\n\n"))
-      tmp = -1;
     if (tab[i].includes("\n"))
       tab[i] = tab[i].replace('\n', '');
-    if (tmp + tab[i].length + 1 < 81)
+    if (tmp + tab[i].length < 81)
     {
+      if (tab[i].includes("\n"))
+        tmp = tab[i].split('\n')[1].length + 1;
+      else
+        tmp += tab[i].length + 1;
       res += tab[i] + ' ';
-      tmp += tab[i].length + 1;
     }
     else
     {
       res += '\n';
-      tmp = -1;
+      tmp = 0;
       i--;
     }
   }
@@ -60,6 +61,7 @@ exports.convert_to_justify = function(str)
 {
   // Put all the required \n
   var res = put_new_line(str);
+  // console.log(res[0]);
 
   // Convert lines to 80 characters
   res[0] = justify_lines(res[0]);
